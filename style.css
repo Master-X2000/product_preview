@@ -1,0 +1,155 @@
+/* || FONT */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lexend+Deca:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+
+/* || RESETS */
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+img,
+svg,
+canvas{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+/* || VARIABLES */
+
+:root{
+    --GREEN: hsl(158, 36%, 37%);
+    --BG-CLR: hsl(30, 38%, 92%);
+    --HEADING-CLR: hsl(212, 21%, 14%);
+    --TEXT-CLR: hsl(228, 12%, 48%);
+    --WHITE: hsl(0, 0%, 100%);
+}
+
+/* || STYLES */
+body{
+    display:grid;
+    place-content:center;
+    background:var(--BG-CLR);
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height:100svh;
+}
+
+.main{
+    display:grid;
+    border-radius: 10px;
+    overflow:hidden;
+    place-content:center;
+    margin:1rem;
+    background:var(--WHITE);
+}
+
+.desktop{
+    display:none;
+}
+
+.info{
+    display:grid;
+    place-content:center;
+    gap:1rem;
+    padding:1.5rem;
+}
+
+.info .first{
+    color:var(--TEXT-CLR);
+    font-size: 15px;
+}
+
+.info .second{
+    color:var(--HEADING-CLR);
+    font-size:2.40010679rem;
+    font-weight:700;
+    font-family: 'Fraunces', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height:1;
+}
+
+.info .third{
+    color:var(--TEXT-CLR);
+    font-weight:500;
+    font-size:15px;
+    line-height:1.5;
+}
+
+.info .fourth{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    gap:1.2rem;
+    width:fit-content;
+}
+
+.info .fourth h2{
+    font-size:2.2rem;
+    width:700;
+    font-family: 'Fraunces', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:var(--GREEN);
+}
+
+.info .fourth p{
+    font-size:15px;
+    color:var(--TEXT-CLR);
+    text-decoration:line-through;
+}
+
+.info .fifth{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:.5rem;
+    padding:1rem;
+    background-color:var(--GREEN);
+    border-radius:10px;
+    border:none;
+    outline:none;
+}
+
+.info .fifth:hover{
+    background-color: hsl(159, 72%, 23%);
+    cursor:pointer;
+}
+
+.info .fifth svg{
+    width:15px;
+    height:16px;
+}
+
+.info .fifth p{
+    font-weight:700;
+    color:var(--WHITE);
+    font-size:15px;
+}
+
+/* || MEDIA QUARY */ 
+
+@media screen and (min-width:585px){
+
+    .main{
+        grid-template-columns:1fr 1fr;
+        max-width:40rem;
+    }
+
+    .desktop{
+        display:block;
+    }
+
+    .mobile{
+        display:none;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
